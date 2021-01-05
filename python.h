@@ -12,7 +12,20 @@ std::vector<std::string> split(const std::string& input, char delimeter){
 
 std::ostream& operator<<(std::ostream& os, const std::vector<int>& data)
 {
-	for (const auto& d : data)
-		os << d << " ";
-	return os;
+  for (const auto& d : data)
+	os << d << " ";
+  return os;
 }
+
+template<typename T>
+int bisect_left(const vector<T>&& vec, T&& val){
+  return lower_bound(vec.begin(),vec.end(),val)-t.begin();
+}
+
+template<typename T>
+int bisect_right(const vector<T>&& vec, T&& val){
+  return upper_bound(vec.begin(),vec.end(),val)-t.begin();
+}
+
+
+
