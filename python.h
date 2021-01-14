@@ -10,7 +10,8 @@ std::vector<std::string> split(const std::string& input, char delimeter){
     return sedlist;
 }
 
-std::ostream& operator<<(std::ostream& os, const std::vector<int>& data)
+template <typename T>
+std::ostream& operator<<(std::ostream& os, const std::vector<T>& data)
 {
   for (const auto& d : data)
 	os << d << " ";
