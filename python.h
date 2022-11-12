@@ -19,12 +19,12 @@ std::ostream& operator<<(std::ostream& os, const std::vector<T>& data)
 }
 
 template<typename T>
-int bisect_left(const vector<T>&& vec, T&& val){
+int bisect_left(const vector<T>& vec, T&& val){
   return lower_bound(vec.begin(),vec.end(),val)-vec.begin();
 }
 
 template<typename T>
-int bisect_right(const vector<T>&& vec, T&& val){
+int bisect_right(const vector<T>& vec, T&& val){
   return upper_bound(vec.begin(),vec.end(),val)-vec.begin();
 }
 
