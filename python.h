@@ -25,7 +25,7 @@ int bisect_left(const vector<T>& vec, T&& val){
 
 template<typename T, typename E>
 int bisect_left(T&& vec, E&& val) {
-	return lower_bound(vec.begin(), vec.end(), val) - vec.begin();
+  return lower_bound(vec.begin(), vec.end(), val) - vec.begin();
 }
 
 template<typename T>
