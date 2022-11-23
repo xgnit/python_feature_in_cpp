@@ -23,10 +23,19 @@ int bisect_left(const vector<T>& vec, T&& val){
   return lower_bound(vec.begin(),vec.end(),val)-vec.begin();
 }
 
+template<typename T, typename E>
+int bisect_left(T&& vec, E&& val) {
+	return lower_bound(vec.begin(), vec.end(), val) - vec.begin();
+}
+
 template<typename T>
 int bisect_right(const vector<T>& vec, T&& val){
   return upper_bound(vec.begin(),vec.end(),val)-vec.begin();
 }
 
+template<typename T，typename E>
+int bisect_right(T&& vec, E&& val){
+  return upper_bound(vec.begin(),vec.end(),val)-vec.begin();
+}
 
 
