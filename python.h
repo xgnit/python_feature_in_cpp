@@ -29,6 +29,14 @@ int bisect_left(T&& vec, E&& val) {
 }
 
 template<typename T>
+int bisect_left(T&& vec, typename std::decay<decltype(*vec.begin())>::type&& val) {
+  return lower_bound(vec.begin(), vec.end(), val) - vec.begin();
+}
+
+
+
+
+template<typename T>
 int bisect_right(const vector<T>& vec, T&& val){
   return upper_bound(vec.begin(),vec.end(),val)-vec.begin();
 }
